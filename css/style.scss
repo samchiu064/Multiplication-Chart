@@ -1,0 +1,137 @@
+// 先統一定義頁面上的顏色、字體大小
+$colors:(
+    mainGreen: #2EB738,
+    mainGray: #F0F0F0,
+    mainWhite: #FFFFFF,
+    mainShadow: #D8D8D8
+);
+
+$font:(
+    sm: 16px,
+    md: 24px,
+    lg: 56px,
+    xl: 128px
+);
+
+@function color($color-type) {
+    @return map-get($colors, $color-type);
+}
+
+@function font($font-size) {
+    @return map-get($font, $font-size);
+}
+
+
+body {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    width: 1280px;
+    max-width: 1280px;
+
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+
+    // 60px/1372px, 55px/1280px
+    padding: 4.37317% 3.29687%;
+    background-color: color(mainGray);
+    li {
+        color: color(mainGreen);
+        // 20px/1372px, 15px/1280px
+        margin: 1.45772% 1.17187%;
+    }
+
+    &_title {
+        width: 350px;
+        max-width: 350px;
+        max-height: 366px;
+        box-sizing: border-box;
+        color: color(mainGreen);
+
+        &_decoration {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 24px;
+
+            span {
+                display: inline-block;
+                width: 280px;
+                max-width: 280px;
+                height: 1px;
+                background-color: color(mainGreen);
+            }
+        }
+
+        h1 {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: font(lg);
+            padding: 113.5px 0px;
+            line-height: 78px;
+
+            span {
+                font-size: font(md);
+                line-height: 28px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.number{
+    &_chart {
+        display: flex;
+        width: 350px;
+        max-width: 350px;
+        max-height: 366px;
+        background-color: #fff;
+        color: color(mainGreen);
+        border-radius: 100px 0px 30px 0px;
+        box-shadow: 0px 3px 10px #D8D8D8;
+    }
+    &_list {
+        display: flex;
+        flex-flow: column wrap; 
+        flex-grow: 2;
+        align-content: space-between;
+        justify-content: space-between;
+        font-size: font(md);
+        padding: 64px 40px;
+    }
+    &_title {
+        display: inline-flex;
+        justify-content: center;
+        font-size: font(xl);
+        h2 {
+            margin-top: -6px;
+            text-shadow: 4px 3px 0px color(mainGray);
+            -webkit-text-stroke: 2px white;
+        }
+    }
+
+}
+
+footer {
+    max-width: 1280px;
+    margin: auto;
+    background-color: color(mainGreen);
+    p {
+        color: #fff;
+        font-size: font(sm);
+        line-height: 24px;
+        text-align: right;
+        margin-right: 6.64%;
+    }
+}
