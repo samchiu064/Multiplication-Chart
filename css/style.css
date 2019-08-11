@@ -21,6 +21,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 4.37317% 3.29687%;
@@ -142,8 +145,8 @@ main {
 }
 
 footer {
-  max-width: 1280px;
   margin: auto;
+  max-width: 1280px;
   background-color: #2EB738;
 }
 

@@ -37,6 +37,7 @@ main {
 
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     box-sizing: border-box;
 
     // 60px/1372px, 55px/1280px
@@ -124,8 +125,8 @@ main {
 }
 
 footer {
-    max-width: 1280px;
     margin: auto;
+    max-width: 1280px;
     background-color: color(mainGreen);
     p {
         color: #fff;
